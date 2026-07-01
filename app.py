@@ -255,9 +255,63 @@ with col6:
 
     st.pyplot(fig)
     
+# ==============================
+# BUSINESS INSIGHTS
+# ==============================
+
+st.markdown("---")
+st.subheader("📊 Business Insights")
+
+top_artist = (
+    spotify.groupby("track_artist")["track_name"]
+    .count()
+    .sort_values(ascending=False)
+    .idxmax()
+)
+
+top_genre = spotify["playlist_genre"].value_counts().idxmax()
+
+top_album = (
+    spotify.groupby("track_album_name")["track_popularity"]
+    .mean()
+    .sort_values(ascending=False)
+    .idxmax()
+)
+
+highest_energy = (
+    spotify.groupby("playlist_genre")["energy"]
+    .mean()
+    .sort_values(ascending=False)
+    .idxmax()
+)
+
+avg_popularity = round(spotify["track_popularity"].mean(), 2)
+
+st.info(f"""
+### Key Findings
+
+🎤 **Top Artist:** **{top_artist}** has the highest number of songs in the dataset.
+
+🎼 **Most Popular Genre:** **{top_genre}** contains the largest number of tracks.
+
+💿 **Highest Rated Album:** **{top_album}** has the highest average popularity.
+
+⚡ **Highest Energy Genre:** **{highest_energy}** has the highest average energy.
+
+⭐ **Average Song Popularity:** **{avg_popularity}**
+
+📈 Songs released after **2015** dominate the dataset, indicating increased digital music production.
+
+💃 Danceability and popularity show a moderate positive relationship, suggesting danceable songs are generally more popular.
+""")
+
 st.markdown("---")
 
-st.subheader("Spotify Dataset")
+# ==============================
+# DATASET
+# ==============================
+
+st.subheader("📄 Spotify Dataset")
 
 st.dataframe(
     spotify,
