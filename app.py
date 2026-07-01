@@ -43,9 +43,7 @@ def load_data():
 
 
 spotify = load_data()
-# =====================================================
-# SIDEBAR FILTER
-# =====================================================
+
 
 st.sidebar.title("Filters")
 
@@ -57,9 +55,7 @@ genre = st.sidebar.multiselect(
 
 spotify = spotify[spotify["playlist_genre"].isin(genre)]
 
-# =====================================================
-# KPI SECTION
-# =====================================================
+
 
 st.subheader("Key Performance Indicators")
 
@@ -72,9 +68,7 @@ kpi4.metric("Average Popularity", round(spotify["track_popularity"].mean(),2))
 
 st.markdown("---")
 
-# =====================================================
-# CHART 1 & 2
-# =====================================================
+
 
 col1, col2 = st.columns(2)
 
@@ -116,9 +110,7 @@ with col2:
 
     st.pyplot(fig)
 
-# =====================================================
-# CHART 3 & 4
-# =====================================================
+
 
 col3, col4 = st.columns(2)
 
@@ -160,9 +152,7 @@ with col4:
 
     st.pyplot(fig)
 
-# =====================================================
-# CHART 5 & 6
-# =====================================================
+
 
 col5, col6 = st.columns(2)
 
@@ -207,11 +197,7 @@ with col6:
     ax.set_xlabel("Average Popularity")
 
     st.pyplot(fig)
-
-# =====================================================
-# RAW DATA
-# =====================================================
-
+    
 st.markdown("---")
 
 st.subheader("Spotify Dataset")
