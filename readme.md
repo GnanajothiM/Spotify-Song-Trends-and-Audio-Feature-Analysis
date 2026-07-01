@@ -1,125 +1,151 @@
 # 🎵 Spotify Song Trends & Audio Feature Analysis
 
-## 📌 Project Overview
-
-Spotify Song Trends & Audio Feature Analysis is a Python-based data analytics project that analyzes Spotify song data to identify music trends, artist performance, genre popularity, albums, and audio features. An interactive Streamlit dashboard provides business insights using KPIs, filters, charts, and downloadable reports.
+A Python-based data analytics project that analyzes Spotify song data to discover music trends, artist performance, genre popularity, album performance, and audio features. The project includes an interactive Streamlit dashboard with KPIs, filters, business insights, and visualizations.
 
 ---
 
-## 🚀 Technologies Used
+# 📌 Project Overview
 
-- Python
-- Pandas
-- Matplotlib
-- Streamlit
-- OpenPyXL
+This project focuses on exploring Spotify song data using Python. It demonstrates the complete data analytics workflow including:
 
----
+- Data Cleaning
+- Data Processing
+- Exploratory Data Analysis (EDA)
+- Business Insights
+- Interactive Dashboard Development
 
-## 📂 Dataset
-
-- Spotify Songs Dataset (.xlsx)
-- 18,000+ Songs
-- 6 Playlist Genres
-- 6,000+ Artists
-- 12,000+ Albums
+The dashboard enables users to interactively explore Spotify data through filters, charts, KPIs, and downloadable datasets.
 
 ---
 
-# 📊 Dashboard Preview
+# 🚀 Features
 
-## 🏠 Dashboard Home
+### Dashboard
 
-Displays the dashboard title, KPIs, sidebar filters, and summary information.
+- Professional Spotify-themed UI
+- Interactive Sidebar Filters
+- KPI Cards
+- Business Insights
+- Responsive Layout
 
-![Dashboard Home](output/dashboard_home.png)
+### Filters
 
----
+- Genre Filter
 
-## 🎛 Sidebar Filters
-
-Interactive filters for Genre selection.
-
-![Sidebar Filters](output/sidebar_filters.png)
-
----
-
-## 📈 Artist & Genre Analysis
-
-- Top 10 Artists
-- Genre Distribution
-
-![Charts 1](output/charts_1.png)
-
----
-
-## 📊 Trend Analysis
-
-- Songs Released Per Year
-- Popularity vs Danceability
-
-![Charts 2](output/charts_2.png)
-
----
-
-## 🎼 Genre & Album Analysis
-
-- Average Energy by Genre
-- Top 10 Albums by Popularity
-
-![Charts 3](output/charts_3.png)
-
----
-
-# 📊 Dashboard Features
-
-✔ KPI Cards
-
-✔ Sidebar Filters
-
-- Genre
-
-✔ Top 10 Artists
-
-✔ Top Genres
-
-✔ Songs Released Per Year
-
-✔ Popularity vs Danceability
-
-✔ Average Energy by Genre
-
-✔ Top Albums
-
-✔ Searchable Dataset
-
-✔ Download Dataset Button
-
----
-
-# 📈 Key Performance Indicators
+### Key Performance Indicators (KPIs)
 
 - 🎵 Total Songs
 - 🎤 Total Artists
 - 💿 Total Albums
 - ⭐ Average Popularity
 
+### Charts
+
+- Top 10 Artists by Number of Songs
+- Genre Distribution
+- Songs Released Per Year
+- Popularity vs Danceability
+- Average Energy by Genre
+- Top 10 Albums by Popularity
+
+### Dataset
+
+- Interactive Data Table
+- Download Dataset as CSV
+
 ---
 
-# 📁 Project Structure
+# 📊 Dashboard Screenshots
 
-```text
-Spotify Song Trends and Audio Feature Analysis
+## 🏠 Dashboard Home
+
+Displays the dashboard title, KPIs, and business overview.
+
+<p align="center">
+<img src="output/dashboard_home.png" width="100%">
+</p>
+
+---
+
+## 🎛 Sidebar Filters
+
+Users can filter songs by Genre to dynamically update all charts.
+
+<p align="center">
+<img src="output/sidebar.png" width="35%">
+</p>
+
+---
+
+## 📈 Artist & Genre Analysis
+
+Top 10 Artists and Genre Distribution.
+
+<p align="center">
+<img src="output/charts_1.png" width="100%">
+</p>
+
+---
+
+## 📉 Release Trend & Popularity Analysis
+
+Songs Released by Year and Popularity vs Danceability.
+
+<p align="center">
+<img src="output/charts_2.png" width="100%">
+</p>
+
+---
+
+## 🎵 Energy & Album Analysis
+
+Average Energy by Genre and Top 10 Albums.
+
+<p align="center">
+<img src="output/charts_3.png" width="100%">
+</p>
+
+---
+
+# 📊 Business Insights
+
+- Queen has the highest number of songs in the dataset.
+- Pop is the most popular playlist genre.
+- Song releases increased significantly after 2010.
+- Danceability has only a moderate relationship with popularity.
+- EDM genre has the highest average energy level.
+- Popular albums consistently achieve higher average popularity scores.
+
+---
+
+# 🛠 Technologies Used
+
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Streamlit
+- OpenPyXL
+
+---
+
+# 📂 Project Structure
+
+```
+Spotify-Song-Trends-and-Audio-Feature-Analysis
 │
-├── dataset/
+├── dataset
 │   └── spotify_songs.xlsx
 │
-├── output/
+├── output
 │   ├── dashboard_home.png
-│   ├── sidebar_filters.png
+│   ├── sidebar.png
 │   ├── charts_1.png
 │   ├── charts_2.png
 │   └── charts_3.png
+│
+├── source
+│   └── spotify_songs.ipynb
 │
 ├── app.py
 ├── requirements.txt
@@ -128,15 +154,27 @@ Spotify Song Trends and Audio Feature Analysis
 
 ---
 
-# ▶️ Installation
+# ⚙ Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/Spotify-Song-Trends-and-Audio-Feature-Analysis.git
+```
+
+Move into the project folder
+
+```bash
+cd Spotify-Song-Trends-and-Audio-Feature-Analysis
+```
+
+Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
----
-
-# ▶️ Run the Project
+Run the Streamlit application
 
 ```bash
 streamlit run app.py
@@ -144,19 +182,29 @@ streamlit run app.py
 
 ---
 
-# 📌 Business Insights
+# 📈 Future Enhancements
 
-- Identifies the most popular artists.
-- Analyzes genre-wise song distribution.
-- Tracks yearly music release trends.
-- Examines relationships between popularity and danceability.
-- Compares average energy across genres.
-- Highlights the most popular albums.
+- Artist Filter
+- Album Filter
+- Language Filter
+- Release Year Filter
+- Dark/Light Theme Toggle
+- Plotly Interactive Charts
+- Predict Song Popularity using Machine Learning
+- Deploy Dashboard on Streamlit Cloud
 
 ---
 
 # 👨‍💻 Developed By
 
-**Gnana Jothi**
+**Gnana Jothi M**
 
-Python • Pandas • Streamlit • Matplotlib
+Electronics and Communication Engineering
+
+Aspiring Data Analyst
+
+---
+
+# 📄 License
+
+This project is developed for educational and portfolio purposes.

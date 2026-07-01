@@ -144,7 +144,7 @@ with col1:
 
     ax.barh(artist.index, artist.values)
 
-    ax.set_xlabel("Number of Songs")
+    ax.set_xlabel("Number of Songs",fontsize=12,fontweight="bold")
 
     st.pyplot(fig)
 
@@ -188,8 +188,8 @@ with col3:
         marker="o"
     )
 
-    ax.set_xlabel("Year")
-    ax.set_ylabel("Songs")
+    ax.set_xlabel("Year",fontsize=12,fontweight="bold")
+    ax.set_ylabel("Songs",fontsize=12,fontweight="bold")
 
     st.pyplot(fig)
 
@@ -204,8 +204,8 @@ with col4:
         spotify["track_popularity"]
     )
 
-    ax.set_xlabel("Danceability")
-    ax.set_ylabel("Popularity")
+    ax.set_xlabel("Danceability",fontsize=12,fontweight="bold")
+    ax.set_ylabel("Popularity",fontsize=12,fontweight="bold")
 
     st.pyplot(fig)
 
@@ -251,7 +251,7 @@ with col6:
         album.values
     )
 
-    ax.set_xlabel("Average Popularity")
+    ax.set_xlabel("Average Popularity",fontsize=12,fontweight="bold")
 
     st.pyplot(fig)
     
