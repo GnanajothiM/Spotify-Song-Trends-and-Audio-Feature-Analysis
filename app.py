@@ -9,7 +9,55 @@ st.set_page_config(
     layout="wide"
 )
 
-st.title("🎵 Spotify Song Trends & Audio Feature Analysis")
+st.markdown("""
+<style>
+
+.stApp{
+background-color:#F5F7FA;
+}
+
+h1{
+color:#191414;
+font-weight:bold;
+}
+
+h2,h3{
+color:#1DB954;
+}
+
+div[data-testid="stMetric"]{
+background:white;
+padding:18px;
+border-radius:15px;
+box-shadow:0px 3px 12px rgba(0,0,0,0.15);
+border-left:8px solid #1DB954;
+}
+
+section[data-testid="stSidebar"]{
+background:#191414;
+}
+
+section[data-testid="stSidebar"] *{
+color:white;
+}
+
+</style>
+""", unsafe_allow_html=True)
+col1, col2 = st.columns([1,8])
+
+with col1:
+    st.image(
+        "https://upload.wikimedia.org/wikipedia/commons/8/84/Spotify_icon.svg",
+        width=80
+    )
+
+with col2:
+    st.title("Spotify Analytics Dashboard")
+    st.caption("Music Trends & Audio Feature Analysis")
+
+st.caption(
+    f"Last Updated : {pd.Timestamp.now().strftime('%d-%b-%Y %I:%M %p')}"
+)
 
 @st.cache_data
 def load_data():
@@ -45,7 +93,16 @@ def load_data():
 spotify = load_data()
 
 
-st.sidebar.title("Filters")
+st.sidebar.image(
+    "https://upload.wikimedia.org/wikipedia/commons/8/84/Spotify_icon.svg",
+    width=100
+)
+
+st.sidebar.title("Spotify Analytics")
+
+st.sidebar.markdown("---")
+
+st.sidebar.header("Filters")
 
 genre = st.sidebar.multiselect(
     "Genre",
@@ -61,10 +118,10 @@ st.subheader("Key Performance Indicators")
 
 kpi1, kpi2, kpi3, kpi4 = st.columns(4)
 
-kpi1.metric("Total Songs", len(spotify))
-kpi2.metric("Artists", spotify["track_artist"].nunique())
-kpi3.metric("Albums", spotify["track_album_name"].nunique())
-kpi4.metric("Average Popularity", round(spotify["track_popularity"].mean(),2))
+kpi1.metric("🎵 Total Songs", len(spotify))
+kpi2.metric("🎤 Artists", spotify["track_artist"].nunique())
+kpi3.metric("💿 Albums", spotify["track_album_name"].nunique())
+kpi4.metric("⭐ Avg Popularity", round(spotify["track_popularity"].mean(),2))
 
 st.markdown("---")
 
@@ -214,4 +271,15 @@ st.download_button(
     csv,
     "spotify.csv",
     "text/csv"
+)
+st.markdown("---")
+
+st.caption(
+"""
+Developed by **Gnana Jothi**
+
+Spotify Song Trends & Audio Feature Analysis
+
+Python • Pandas • Streamlit • Matplotlib
+"""
 )
