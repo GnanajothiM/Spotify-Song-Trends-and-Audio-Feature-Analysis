@@ -197,9 +197,3 @@ streamlit run app.py
 **Gnana Jothi M**
 
 Aspiring Data Analyst
-
----
-
-# 📄 License
-
-This project is developed for educational and portfolio purposes.
