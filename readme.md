@@ -101,7 +101,7 @@ Shows the number of songs released each year and the relationship between Dancea
 Displays the average energy by genre and the Top 10 Albums based on average popularity.
 
 <p align="center">
-  <img src="output/Energy & Album Analysis.png" width="100%">
+  <img src="output/Energy & Album Analysis.png" width="50%">
 </p>
 
 # 📊 Business Insights
