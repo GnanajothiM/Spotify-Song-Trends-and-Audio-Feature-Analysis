@@ -1,10 +1,10 @@
-# 🎵 Spotify Song Trends & Audio Feature Analysis
+# Spotify Song Trends & Audio Feature Analysis
 
 A Python-based data analytics project that analyzes Spotify song data to discover music trends, artist performance, genre popularity, album performance, and audio features. The project includes an interactive Streamlit dashboard with KPIs, filters, business insights, and visualizations.
 
 ---
 
-# 📌 Project Overview
+# Project Overview
 
 This project focuses on exploring Spotify song data using Python. It demonstrates the complete data analytics workflow including:
 
@@ -18,7 +18,7 @@ The dashboard enables users to interactively explore Spotify data through filter
 
 ---
 
-# 🚀 Features
+# Features
 
 ### Dashboard
 
@@ -54,24 +54,24 @@ The dashboard enables users to interactively explore Spotify data through filter
 - Download Dataset as CSV
 
 ---
-# 📊 Dashboard Screenshots
+# Dashboard Screenshots
 
-## 🏠 Dashboard Home
+## Dashboard Home
 
 Displays the dashboard title, KPIs, and business overview.
 
 <p align="center">
-  <img src="output/dashboard_home.png" width="100%">
+  <img src="output/dashboard_home.png" width="50%">
 </p>
 
 ---
 
-## 🎛 Sidebar Filters
+##  Sidebar Filters
 
 Users can filter songs by genre, and all charts update automatically.
 
 <p align="center">
-  <img src="output/filter.png" width="35%">
+  <img src="output/Sidebar Filters.png" width="35%">
 </p>
 
 ---
@@ -81,7 +81,7 @@ Users can filter songs by genre, and all charts update automatically.
 Shows the Top 10 Artists by number of songs and the distribution of playlist genres.
 
 <p align="center">
-  <img src="output/chart1.png" width="100%">
+  <img src="output/Top Artists & Genre Distribution.png" width="50%">
 </p>
 
 ---
@@ -91,7 +91,7 @@ Shows the Top 10 Artists by number of songs and the distribution of playlist gen
 Shows the number of songs released each year and the relationship between Danceability and Popularity.
 
 <p align="center">
-  <img src="output/chart2.png" width="100%">
+  <img src="output/Release Trend & Popularity Analysis.png" width="50%">
 </p>
 
 ---
@@ -101,7 +101,7 @@ Shows the number of songs released each year and the relationship between Dancea
 Displays the average energy by genre and the Top 10 Albums based on average popularity.
 
 <p align="center">
-  <img src="output/chart3.png" width="100%">
+  <img src="output/Energy & Album Analysis.png" width="100%">
 </p>
 
 # 📊 Business Insights
