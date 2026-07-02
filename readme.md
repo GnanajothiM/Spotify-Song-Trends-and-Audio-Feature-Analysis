@@ -54,7 +54,6 @@ The dashboard enables users to interactively explore Spotify data through filter
 - Download Dataset as CSV
 
 ---
-
 # 📊 Dashboard Screenshots
 
 ## 🏠 Dashboard Home
@@ -62,50 +61,48 @@ The dashboard enables users to interactively explore Spotify data through filter
 Displays the dashboard title, KPIs, and business overview.
 
 <p align="center">
-<img src="output/dashboard_home.png" width="100%">
+  <img src="output/dashboard_home.png" width="100%">
 </p>
 
 ---
 
 ## 🎛 Sidebar Filters
 
-Users can filter songs by Genre to dynamically update all charts.
+Users can filter songs by genre, and all charts update automatically.
 
 <p align="center">
-<img src="output/sidebar.png" width="35%">
+  <img src="output/filter.png" width="35%">
 </p>
 
 ---
 
-## 📈 Artist & Genre Analysis
+## 📈 Top Artists & Genre Distribution
 
-Top 10 Artists and Genre Distribution.
+Shows the Top 10 Artists by number of songs and the distribution of playlist genres.
 
 <p align="center">
-<img src="output/charts_1.png" width="100%">
+  <img src="output/chart1.png" width="100%">
 </p>
 
 ---
 
 ## 📉 Release Trend & Popularity Analysis
 
-Songs Released by Year and Popularity vs Danceability.
+Shows the number of songs released each year and the relationship between Danceability and Popularity.
 
 <p align="center">
-<img src="output/charts_2.png" width="100%">
+  <img src="output/chart2.png" width="100%">
 </p>
 
 ---
 
 ## 🎵 Energy & Album Analysis
 
-Average Energy by Genre and Top 10 Albums.
+Displays the average energy by genre and the Top 10 Albums based on average popularity.
 
 <p align="center">
-<img src="output/charts_3.png" width="100%">
+  <img src="output/chart3.png" width="100%">
 </p>
-
----
 
 # 📊 Business Insights
 
@@ -198,8 +195,6 @@ streamlit run app.py
 # 👨‍💻 Developed By
 
 **Gnana Jothi M**
-
-Electronics and Communication Engineering
 
 Aspiring Data Analyst
 
