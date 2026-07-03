@@ -34,10 +34,10 @@ The dashboard enables users to interactively explore Spotify data through filter
 
 ### Key Performance Indicators (KPIs)
 
-- 🎵 Total Songs
-- 🎤 Total Artists
-- 💿 Total Albums
-- ⭐ Average Popularity
+-  Total Songs
+-  Total Artists
+-  Total Albums
+-  Average Popularity
 
 ### Charts
 
@@ -76,7 +76,7 @@ Users can filter songs by genre, and all charts update automatically.
 
 ---
 
-## 📈 Top Artists & Genre Distribution
+##  Top Artists & Genre Distribution
 
 Shows the Top 10 Artists by number of songs and the distribution of playlist genres.
 
@@ -86,7 +86,7 @@ Shows the Top 10 Artists by number of songs and the distribution of playlist gen
 
 ---
 
-## 📉 Release Trend & Popularity Analysis
+##  Release Trend & Popularity Analysis
 
 Shows the number of songs released each year and the relationship between Danceability and Popularity.
 
@@ -96,7 +96,7 @@ Shows the number of songs released each year and the relationship between Dancea
 
 ---
 
-## 🎵 Energy & Album Analysis
+##  Energy & Album Analysis
 
 Displays the average energy by genre and the Top 10 Albums based on average popularity.
 
@@ -104,7 +104,7 @@ Displays the average energy by genre and the Top 10 Albums based on average popu
   <img src="output/Energy & Album Analysis.png" width="50%">
 </p>
 
-# 📊 Business Insights
+#  Business Insights
 
 - Queen has the highest number of songs in the dataset.
 - Pop is the most popular playlist genre.
@@ -115,7 +115,7 @@ Displays the average energy by genre and the Top 10 Albums based on average popu
 
 ---
 
-# 🛠 Technologies Used
+#  Technologies Used
 
 - Python
 - Pandas
@@ -126,7 +126,7 @@ Displays the average energy by genre and the Top 10 Albums based on average popu
 
 ---
 
-# 📂 Project Structure
+#  Project Structure
 
 ```
 Spotify-Song-Trends-and-Audio-Feature-Analysis
@@ -151,7 +151,7 @@ Spotify-Song-Trends-and-Audio-Feature-Analysis
 
 ---
 
-# ⚙ Installation
+# Installation
 
 Clone the repository
 
@@ -179,7 +179,7 @@ streamlit run app.py
 
 ---
 
-# 📈 Future Enhancements
+#  Future Enhancements
 
 - Artist Filter
 - Album Filter
@@ -192,7 +192,7 @@ streamlit run app.py
 
 ---
 
-# 👨‍💻 Developed By
+#  Developed By
 
 **Gnana Jothi M**
 
