@@ -114,9 +114,18 @@ genre = st.sidebar.multiselect(
     default=sorted(spotify["playlist_genre"].dropna().unique())
 )
 
-spotify = spotify[spotify["playlist_genre"].isin(genre)]
 
 
+language = st.sidebar.multiselect(
+    "Language",
+    sorted(spotify["language"].dropna().unique()),
+    default=sorted(spotify["language"].dropna().unique())
+)
+
+spotify = spotify[
+    (spotify["playlist_genre"].isin(genre)) &
+    (spotify["language"].isin(language))
+]
 
 st.subheader("Key Performance Indicators")
 
@@ -196,27 +205,41 @@ with col3:
     ax.set_ylabel("Songs",fontsize=12,fontweight="bold")
 
     st.pyplot(fig)
-
 with col4:
+    st.subheader("Top 10 Artists by Average Energy")
 
-    st.subheader("Popularity vs Danceability")
+    # Get Top 10 Artists by Average Energy
+    top_energy = (
+        spotify.groupby("track_artist")["energy"]
+        .mean()
+        .nlargest(10)              # Select top 10 highest energy artists
+        .sort_values(ascending=True)  # Display from low to high
+    )
 
     fig, ax = plt.subplots(figsize=(8,5))
 
     ax.scatter(
-        spotify["danceability"],
-        spotify["track_popularity"]
+        top_energy.index,
+        top_energy.values,
+        s=150,
+        color="orange"
     )
 
-    ax.set_xlabel("Danceability",fontsize=12,fontweight="bold")
-    ax.set_ylabel("Popularity",fontsize=12,fontweight="bold")
+    ax.set_title(
+        "Top 10 Artists by Average Energy",
+        fontsize=18,
+        fontweight="bold"
+    )
+
+    ax.set_xlabel("Artist", fontsize=12, fontweight="bold")
+    ax.set_ylabel("Average Energy", fontsize=12, fontweight="bold")
+
+    plt.xticks(rotation=45, ha="right")
+    plt.tight_layout()
 
     st.pyplot(fig)
 
-
-
 col5, col6 = st.columns(2)
-
 with col5:
 
     st.subheader("Average Energy by Genre")
