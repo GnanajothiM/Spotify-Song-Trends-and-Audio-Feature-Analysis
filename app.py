@@ -201,8 +201,11 @@ with col3:
         marker="o"
     )
 
-    ax.set_xlabel("Year",fontsize=12,fontweight="bold")
-    ax.set_ylabel("Songs",fontsize=12,fontweight="bold")
+    ax.set_xlabel("Year", fontsize=12, fontweight="bold")
+    ax.set_ylabel("Songs", fontsize=12, fontweight="bold")
+
+    # Show X-axis up to 2026
+    ax.set_xlim(1956, 2026)
 
     st.pyplot(fig)
 with col4:
